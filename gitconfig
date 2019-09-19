@@ -1,0 +1,17 @@
+[user]
+	name = Russell Rollins
+	email = russell1124@gmail.com
+	signingkey = 0xF2C059A6C8EB6284
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[core]
+	excludesfile = ~/.gitignore
+
+[alias]
+	poh = push origin HEAD
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+
+[commit]
+	gpgsign = true

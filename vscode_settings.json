@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.editor.showTabs": true,
+    "files.insertFinalNewline": true,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "window.zoomLevel": 0.75,
+    "terminal.explorerKind": "external",
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.fontFamily": "Fira Code",
+    "terminal.integrated.fontSize": 14
+}

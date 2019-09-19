@@ -1,0 +1,9 @@
+# Don't commit VSCode stuff
+*.code-workspace
+
+# Don't commit Vim stuff
+*.swp
+
+# Don't commit MacOS stuff
+.DS_Store
+.DS_Store?
