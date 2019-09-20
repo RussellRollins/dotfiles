@@ -97,6 +97,22 @@ else
   go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 fi
 
+# can't live without goimports
+if command -v goimports >/dev/null 2>&1 ; then
+  echo "goimports installed..."
+else
+  echo "Installing goimports"
+  go get -v golang.org/x/tools/cmd/goimports
+fi
+
+# CircleCI CLI is useful
+if command -v circleci >/dev/null 2>&1 ; then
+  echo "circleci installed..."
+else
+  echo "Installing CircleCI CLI"
+  curl -fLSs https://circle.ci/cli | bash
+fi
+
 # Grab FiraCode fonts:
 if ls "${HOME}/Library/Fonts/otf" | grep -i "fira" >/dev/null 2>&1 ; then
   echo "FiraCode fonts already installed..."
@@ -117,6 +133,7 @@ ln -s "$(pwd)/vscode_settings.json" "${HOME}/Library/Application Support/Code/Us
 echo "Installing VSCode extensions"
 code --install-extension timonwong.shellcheck
 code --install-extension vscodevim.vim
+code --install-extension ms-vscode.go
 
 # Silly one, set desktop background
 echo "Setting desktop background"

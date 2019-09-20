@@ -18,3 +18,6 @@ cask "iterm2"
 
 # Some scripts like wget
 brew "wget"
+
+# Don't love it, but need it
+brew "rbenv"

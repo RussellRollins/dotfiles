@@ -79,3 +79,6 @@ __prompt_command() {
 
 export PATH="/usr/local/sbin:${HOME}/go/bin:${HOME}/bin/go/bin:${HOME}/bin:/usr/local/bin:${PATH}"
 export GOPRIVATE="github.com/hashicorp"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
