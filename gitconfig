@@ -2,7 +2,6 @@
 	name = Russell Rollins
 	email = russell1124@gmail.com
 	signingkey = 0xF2C059A6C8EB6284
-	#signingkey = 0x0A1DA1A39C585357
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
