@@ -138,7 +138,7 @@ code --install-extension ms-vscode.go
 # Silly one, set desktop background
 echo "Setting desktop background"
 if [ ! -f "${HOME}/Pictures/ksbd.jpg" ]; then
-  curl --silent --ouput \
+  curl --silent --output \
     "${HOME}/Pictures/ksbd.jpg" \
     "https://killsixbilliondemons.com/wp-content/uploads/2017/02/SOT32-33.jpg"
 fi
@@ -146,7 +146,8 @@ osascript -e \
   "tell application \"System Events\" to tell every desktop to set picture to POSIX file \"${HOME}/Pictures/ksbd.jpg\""
 
 # Set scrolling to be not stupid
-if [ "$(defaults read -g com.apple.swipescrolldirection)" -eq "1" ]; then
-  defaults write -g com.apple.swipescrolldirection -bool NO
-  sudo shutdown -r now "Rebooting to pick up scroll fix..."
-fi
+# Doesn't appear to work on Mojave? Required stupid.
+#if [ "$(defaults read -g com.apple.swipescrolldirection)" -eq "1" ]; then
+#  defaults write -g com.apple.swipescrolldirection -bool NO
+#  sudo shutdown -r now "Rebooting to pick up scroll fix..."
+#fi
