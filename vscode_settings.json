@@ -9,6 +9,22 @@
     "terminal.external.osxExec": "iTerm.app",
     "editor.fontFamily": "Fira Code",
     "terminal.integrated.fontSize": 14,
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true
+    "go.formatTool": "goreturns",
+    "go.buildOnSave": "off",
+    "go.lintOnSave": "off",
+    "go.vetOnSave": "off",
+    "go.useLanguageServer": true,
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
+    }
 }

@@ -85,3 +85,5 @@ eval "$(rbenv init -)"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+alias nyan="echo -n \$(ruby -e 'puts \"#{\":nyan-rainbow:\" * rand(1..10)}\"') | pbcopy"

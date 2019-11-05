@@ -21,3 +21,6 @@ brew "wget"
 
 # Don't love it, but need it
 brew "rbenv"
+
+# Envchain, convenient
+brew "envchain"
