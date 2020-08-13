@@ -1,19 +1,20 @@
 {
     "workbench.colorTheme": "Solarized Dark",
-    "workbench.editor.showTabs": true,
     "files.insertFinalNewline": true,
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
-    "window.zoomLevel": 0.75,
+    "window.zoomLevel": 1,
     "terminal.explorerKind": "external",
     "terminal.external.osxExec": "iTerm.app",
     "editor.fontFamily": "Fira Code",
     "terminal.integrated.fontSize": 14,
     "go.formatTool": "goreturns",
     "go.buildOnSave": "off",
-    "go.lintOnSave": "off",
-    "go.vetOnSave": "off",
     "go.useLanguageServer": true,
+    "go.lintTool":"golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
     "terraform.indexing": {
         "enabled": false,
         "liveIndexing": false,
@@ -24,7 +25,9 @@
         ]
     },
     "terraform.languageServer": {
-        "enabled": true,
-        "args": []
+        "external": true,
+        "args": [
+            "serve"
+        ]
     }
 }

@@ -1,6 +1,5 @@
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
+#! /usr/bin/env bash
+export SSH_AUTH_SOCK="/usr/local/var/run/yubikey-agent.sock"
 
 source ~/bin/git-completion.bash
 
@@ -87,3 +86,17 @@ eval "$(rbenv init -)"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 alias nyan="echo -n \$(ruby -e 'puts \"#{\":nyan-rainbow:\" * rand(1..10)}\"') | pbcopy"
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Add pip to PATH
+export PATH="$PATH:/${HOME}/Library/Python/2.7/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rustyfe/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/rustyfe/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/rustyfe/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/rustyfe/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# Add cloud-dev to the PATH
+export PATH="${PATH}:/${HOME}/Code/cloud-sre/bin"
